@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="987.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.upcycled.controller.CustomerController">
+   <children>
+      <AnchorPane fx:id="topBar" layoutX="40.0" layoutY="16.0" prefHeight="71.0" prefWidth="1076.0" style="-fx-background-color: #FFFFF0;">
+         <children>
+            <Label fx:id="lblHeader" layoutX="530.0" layoutY="19.0" prefHeight="32.0" prefWidth="186.0" text="Customers" textFill="#e0d16e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" layoutX="932.0" layoutY="26.0" text="Admin_Name">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" layoutX="894.0" layoutY="46.0" size="30" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="29.0" layoutY="682.0" prefHeight="291.0" prefWidth="1098.0">
+         <children>
+            <TableView fx:id="tblCustomer" layoutX="36.0" layoutY="17.0" prefHeight="263.0" prefWidth="1027.0" style="-fx-border-radius: 20 20 20 20; -fx-border-color: #e0d16e;">
+              <columns>
+                <TableColumn fx:id="colCustomerID" prefWidth="99.0" text="Customer ID" />
+                <TableColumn fx:id="colCustomerName" minWidth="0.0" prefWidth="280.0" text=" Name" />
+                  <TableColumn fx:id="colCustomerEmail" prefWidth="236.0" text="Email" />
+                  <TableColumn fx:id="colCustomerPhoneNumber" prefWidth="188.0" text="Phone Number" />
+                  <TableColumn fx:id="colCustomerAddress" prefWidth="220.0" text="Address" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-7.0" layoutY="538.0" prefHeight="98.0" prefWidth="1164.0">
+         <children>
+            <JFXButton fx:id="btnSave" layoutX="32.0" layoutY="14.0" onAction="#btnAddCustomerOnAction" prefHeight="71.0" prefWidth="263.0" style="-fx-border-radius: 25; -fx-border-color: #e0d16e;" text="     Add Customer" textFill="#e0d16e">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/item.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="599.0" layoutY="14.0" onAction="#btnUpdateCustomerOnAction" prefHeight="71.0" prefWidth="279.0" style="-fx-border-radius: 25; -fx-border-color: #5a9e26;" text="     Update Customer" textFill="#5a9e26">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="890.0" layoutY="12.0" onAction="#btnDeleteCustomerOnAction" prefHeight="74.0" prefWidth="263.0" style="-fx-border-radius: 25; -fx-border-color: #e78649;" text="     Delete Customer" textFill="#e78649">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="309.0" layoutY="14.0" onAction="#btnSearchCustomerOnAction" prefHeight="71.0" prefWidth="279.0" style="-fx-border-radius: 25; -fx-border-color: black;" text="     Search Customer">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/search-26241.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="446.0" layoutY="190.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane layoutX="-322.0" layoutY="-84.0" prefHeight="421.0" prefWidth="905.0" style="-fx-border-color: #e0d16e; -fx-border-radius: 25 25 25 25;">
+               <children>
+                  <Label layoutX="80.0" layoutY="49.0" text="Customer ID">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="80.0" layoutY="116.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="80.0" layoutY="190.0" text="Email">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="260.0" text="Phone Number">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtCusName" layoutX="488.0" layoutY="109.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="287.0" />
+                  <JFXTextField fx:id="txtCusID" layoutX="487.0" layoutY="49.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="287.0" />
+                  <JFXTextField fx:id="txtCusEmail" layoutX="488.0" layoutY="180.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="287.0" />
+                  <JFXTextField fx:id="txtCusPN" layoutX="488.0" layoutY="247.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="287.0" />
+                  <Label layoutX="81.0" layoutY="320.0" text="Address">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtCusAddress" layoutX="487.0" layoutY="321.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="287.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

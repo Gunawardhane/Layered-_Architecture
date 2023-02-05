@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="946.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.upcycled.controller.AdminLoginController">
+   <children>
+      <ImageView fitHeight="432.0" fitWidth="711.0" layoutX="12.0" layoutY="65.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asset/loginImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="201.0" fitWidth="186.0" layoutX="282.0" layoutY="142.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asset/output-onlinepngtools.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="696.0" layoutY="16.0" prefHeight="517.0" prefWidth="219.0" style="-fx-background-color: #78786e; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="61.0" layoutY="12.0" prefHeight="30.0" prefWidth="134.0" text="Admin Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="21.0" layoutY="14.0" onMouseClicked="#backToHomeForm" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@asset/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="34.0" layoutY="110.0" prefHeight="30.0" prefWidth="122.0" text="UserName" textFill="#e0d16e">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUsername" focusColor="#e0d16e" layoutX="34.0" layoutY="150.0" promptText="Enter Username Here..." unFocusColor="#e0d16e">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <Label layoutX="34.0" layoutY="235.0" prefHeight="31.0" prefWidth="111.0" text="Password" textFill="#e0d16e">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtPassword" focusColor="#e0d16e" layoutX="34.0" layoutY="272.0" promptText="Enter Password Here..." unFocusColor="#e0d16e">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <JFXButton layoutX="58.0" layoutY="369.0" onAction="#btnAdminLogin" prefHeight="46.0" prefWidth="122.0" ripplerFill="#c7c98d" style="-fx-background-color: #E0D16E;" text="Log in" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <Line endX="134.0" layoutX="101.0" layoutY="49.0" startX="-100.0" stroke="#e0d16e" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

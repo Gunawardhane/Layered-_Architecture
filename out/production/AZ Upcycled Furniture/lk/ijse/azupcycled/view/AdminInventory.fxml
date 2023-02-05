@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="987.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.upcycled.controller.AdminInventoryController">
+   <children>
+      <AnchorPane fx:id="topBar" layoutX="40.0" layoutY="16.0" prefHeight="71.0" prefWidth="1076.0" style="-fx-background-color: #FFFFF0;">
+         <children>
+            <Label fx:id="lblHeader" layoutX="530.0" layoutY="19.0" prefHeight="32.0" prefWidth="186.0" text="Inventory" textFill="#e0d16e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" layoutX="932.0" layoutY="26.0" text="Admin_Name">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" layoutX="894.0" layoutY="46.0" size="30" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="50.0" layoutY="650.0" prefHeight="291.0" prefWidth="1099.0">
+         <children>
+            <TableView fx:id="tblInventory" layoutX="160.0" layoutY="35.0" prefHeight="221.0" prefWidth="754.0" style="-fx-border-radius: 20 20 20 20; -fx-border-color: #e0d16e;">
+              <columns>
+                <TableColumn fx:id="colInventoryID" prefWidth="153.00003051757812" text="Inventory ID" />
+                <TableColumn fx:id="colSupplierID" minWidth="0.0" prefWidth="166.0" text="Supplier ID" />
+                  <TableColumn fx:id="colInventoryItemID" prefWidth="211.0" text="Item ID" />
+                  <TableColumn fx:id="colInventoryQtyOnHand" prefWidth="234.0" text="Qty On Hand" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="20.0" layoutY="555.0" prefHeight="106.0" prefWidth="1131.0">
+         <children>
+            <JFXButton fx:id="btnSave" layoutX="10.0" layoutY="24.0" onAction="#btnAddInventoryOnAction" prefHeight="54.0" prefWidth="238.0" style="-fx-border-radius: 25; -fx-border-color: #e0d16e;" text="     Add to Inventory" textFill="#e0d16e">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/item.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="533.0" layoutY="30.0" onAction="#btnUpdateInventoryOnAction" prefHeight="54.0" prefWidth="287.0" style="-fx-border-radius: 25; -fx-border-color: #5a9e26;" text="     Update from Inventory" textFill="#5a9e26">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="830.0" layoutY="29.0" onAction="#btnDeleteInventoryOnAction" prefHeight="54.0" prefWidth="287.0" style="-fx-border-radius: 25; -fx-border-color: #e78649;" text="     Delete from Inventory" textFill="#e78649">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="258.0" layoutY="28.0" onAction="#btnSearchInventoryOnAction" prefHeight="54.0" prefWidth="268.0" style="-fx-border-radius: 25; -fx-border-color: black;" text="     Search from Inventory">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/search-26241.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="129.0" layoutY="142.0" prefHeight="346.0" prefWidth="905.0" style="-fx-border-color: #e0d16e; -fx-border-radius: 25 25 25 25;">
+         <children>
+            <Label layoutX="80.0" layoutY="49.0" text="Inventory ID">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="116.0" text="Qty On Hand">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="190.0" text="Supplier ID">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="260.0" text="Item ID">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtQtyOnHand" layoutX="488.0" layoutY="109.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="287.0" />
+            <JFXTextField fx:id="txtInventoryID" layoutX="487.0" layoutY="49.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="287.0" />
+            <JFXTextField fx:id="txtSupplierID" layoutX="488.0" layoutY="180.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="287.0" />
+            <JFXTextField fx:id="txtItemID" layoutX="488.0" layoutY="247.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="287.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

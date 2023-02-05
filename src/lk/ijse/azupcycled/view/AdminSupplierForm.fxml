@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="987.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.upcycled.controller.AdminSupplierController">
+   <children>
+      <AnchorPane fx:id="topBar" layoutX="40.0" layoutY="16.0" prefHeight="71.0" prefWidth="1076.0" style="-fx-background-color: #FFFFF0;">
+         <children>
+            <Label fx:id="lblHeader" layoutX="530.0" layoutY="19.0" prefHeight="32.0" prefWidth="186.0" text="Suppliers" textFill="#e0d16e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" layoutX="932.0" layoutY="26.0" text="Admin_Name">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" layoutX="894.0" layoutY="46.0" size="30" />
+            <ImageView fitHeight="37.0" fitWidth="47.0" layoutX="832.0" layoutY="17.0" onMouseClicked="#refreshThePage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@asset/refresh_button.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="40.0" layoutY="716.0" prefHeight="281.0" prefWidth="1098.0">
+         <children>
+            <TableView fx:id="tblSuppliers" layoutX="87.0" layoutY="14.0" prefHeight="222.0" prefWidth="874.0" style="-fx-border-radius: 20 20 20 20; -fx-border-color: #e0d16e;">
+              <columns>
+                <TableColumn fx:id="colSupplierID" prefWidth="202.0" text="Supplier ID" />
+                <TableColumn fx:id="colSupplierName" minWidth="0.0" prefWidth="215.0" text=" Name" />
+                  <TableColumn fx:id="colSupplierAddress" prefWidth="215.0" text="Address" />
+                  <TableColumn fx:id="colSupplierPN" prefWidth="215.0" text="Phone Number" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="13.0" layoutY="579.0" prefHeight="95.0" prefWidth="1123.0">
+         <children>
+            <JFXButton layoutX="550.0" layoutY="14.0" onAction="#btnUpdateSuppliersOnAction" prefHeight="66.0" prefWidth="277.0" style="-fx-border-radius: 25; -fx-border-color: #5a9e26;" text="     Update Suppliers" textFill="#5a9e26">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="837.0" layoutY="14.0" onAction="#btnDeleteSuppliersOnAction" prefHeight="66.0" prefWidth="277.0" style="-fx-border-radius: 25; -fx-border-color: #e78649;" text="     Delete Suppliers" textFill="#e78649">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="277.0" layoutY="15.0" onAction="#btnSearchSuppliersOnAction" prefHeight="66.0" prefWidth="267.0" style="-fx-border-radius: 25; -fx-border-color: black;" text="     Search Suppliers">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/search-26241.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSave" layoutX="14.0" layoutY="14.0" onAction="#btnAddSuppliersOnAction" prefHeight="66.0" prefWidth="252.0" style="-fx-border-radius: 25; -fx-border-color: #e0d16e;" text="     Add Suppliers" textFill="#e0d16e">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/item.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="213.0" layoutY="191.0" prefHeight="303.0" prefWidth="683.0">
+         <children>
+            <AnchorPane layoutX="-15.0" layoutY="-8.0" prefHeight="320.0" prefWidth="771.0" style="-fx-border-color: #e0d16e; -fx-background-color: #FFF;">
+               <children>
+                  <Label layoutX="86.0" layoutY="47.0" prefHeight="34.0" prefWidth="136.0" text="Supplier ID">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="86.0" layoutY="99.0" prefHeight="25.0" prefWidth="69.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="86.0" layoutY="154.0" prefHeight="34.0" prefWidth="158.0" text="Address">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="86.0" layoutY="211.0" prefHeight="34.0" prefWidth="210.0" text="Phone Number">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtSupplierID" layoutX="344.0" layoutY="33.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="307.0" />
+                  <JFXTextField fx:id="txtSupplierName" layoutX="344.0" layoutY="87.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="307.0" />
+                  <JFXTextField fx:id="txtSupplierAddress" layoutX="344.0" layoutY="144.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="307.0" />
+                  <JFXTextField fx:id="txtSupplierPhoneNumber" layoutX="344.0" layoutY="198.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="307.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="969.0" layoutY="125.0" prefHeight="47.0" prefWidth="62.0" text=" " />
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="987.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.upcycled.controller.EmployeesController">
+   <children>
+      <AnchorPane fx:id="topBar" layoutX="40.0" layoutY="16.0" prefHeight="71.0" prefWidth="1076.0" style="-fx-background-color: #FFFFF0;">
+         <children>
+            <Label fx:id="lblHeader" layoutX="530.0" layoutY="19.0" prefHeight="32.0" prefWidth="186.0" text="Employees" textFill="#e0d16e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" layoutX="932.0" layoutY="26.0" text="Admin_Name">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" layoutX="894.0" layoutY="46.0" size="30" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="29.0" layoutY="382.0" prefHeight="550.0" prefWidth="1098.0">
+         <children>
+            <TableView fx:id="tblEmployee" layoutX="156.0" layoutY="31.0" prefHeight="489.0" prefWidth="787.0" style="-fx-border-radius: 20 20 20 20; -fx-border-color: #e0d16e;">
+              <columns>
+                <TableColumn fx:id="colEmployeeID" prefWidth="119.0" text="Employee ID" />
+                <TableColumn fx:id="colEmployeeName" minWidth="0.0" prefWidth="201.0" text="Name" />
+                  <TableColumn fx:id="colEmployeeAddress" prefWidth="211.0" text="Address" />
+                  <TableColumn fx:id="colEmployeePhoneNumber" prefWidth="259.0" text="Phone Number" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="59.0" layoutY="99.0" prefHeight="291.0" prefWidth="1053.0" style="-fx-background-color: #FFFFF0; -fx-border-radius: 30 30 30 30; -fx-border-color: #e0d16e;">
+         <children>
+            <JFXButton layoutX="18.0" layoutY="14.0" onAction="#btnAddEmployeeOnAction" prefHeight="71.0" prefWidth="305.0" style="-fx-border-radius: 25; -fx-border-color: #e0d16e;" text="     Add Employee" textFill="#e0d16e">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/item.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="339.0" layoutY="14.0" onAction="#btnUpdateEmployeeOnAction" prefHeight="71.0" prefWidth="342.0" style="-fx-border-radius: 25; -fx-border-color: #5a9e26;" text="     Update Employee" textFill="#5a9e26">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="700.0" layoutY="13.0" onAction="#btnDeleteEmployeeOnAction" prefHeight="74.0" prefWidth="342.0" style="-fx-border-radius: 25; -fx-border-color: #e78649;" text="     Delete Employee" textFill="#e78649">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="txtSearchEmployee" layoutX="348.0" layoutY="122.0" prefHeight="31.0" prefWidth="342.0" promptText="Search [Enter Employee ID and Press Enter]" />
+            <JFXButton layoutX="393.0" layoutY="192.0" onAction="#btnRefreshOnAction" prefHeight="71.0" prefWidth="235.0" style="-fx-border-color: #6fcade;" text="     Refresh" textFill="#6fcade">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/refresh.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

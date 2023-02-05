@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="987.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.upcycled.controller.CustomerOrderController">
+   <children>
+      <AnchorPane fx:id="topBar" layoutX="40.0" layoutY="16.0" prefHeight="71.0" prefWidth="1076.0" style="-fx-background-color: #FFFFF0;">
+         <children>
+            <Label fx:id="lblHeader" layoutX="530.0" layoutY="19.0" prefHeight="32.0" prefWidth="186.0" text="Orders" textFill="#e0d16e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" layoutX="932.0" layoutY="26.0" text="Admin_Name">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" layoutX="894.0" layoutY="46.0" size="30" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="21.0" layoutY="480.0" prefHeight="128.0" prefWidth="1096.0" style="-fx-border-radius: 30 30 30 30;">
+         <children>
+            <JFXButton fx:id="btnSave" layoutX="28.0" layoutY="34.0" onAction="#btnAddOrderOnAction" prefHeight="71.0" prefWidth="235.0" style="-fx-border-radius: 25; -fx-border-color: #e0d16e;" text="     Add Order" textFill="#e0d16e">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/item.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="557.0" layoutY="29.0" onAction="#btnUpdateOrderOnAction" prefHeight="71.0" prefWidth="251.0" style="-fx-border-radius: 25; -fx-border-color: #5a9e26;" text="     Update Order" textFill="#5a9e26">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="839.0" layoutY="26.0" onAction="#btnDeleteOrderOnAction" prefHeight="74.0" prefWidth="244.0" style="-fx-border-radius: 25; -fx-border-color: #e78649;" text="     Delete Order" textFill="#e78649">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="295.0" layoutY="32.0" onAction="#btnSearchOrderOnAction" prefHeight="71.0" prefWidth="244.0" style="-fx-border-radius: 25; -fx-border-color: black;" text="     Search Order">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@asset/search-26241.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblOrders" layoutX="208.0" layoutY="647.0" prefHeight="200.0" prefWidth="634.0" style="-fx-border-radius: 20 20 20 20; -fx-border-color: #e0d16e;">
+         <columns>
+            <TableColumn fx:id="colOrderID" prefWidth="202.0" text="Order ID" />
+            <TableColumn fx:id="colOrderAmount" minWidth="0.0" prefWidth="215.0" text="Amount" />
+            <TableColumn fx:id="colCustomerID" prefWidth="215.0" text="Customer ID" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="160.0" layoutY="134.0" prefHeight="238.0" prefWidth="771.0" style="-fx-border-radius: 25; -fx-background-color: #FFFF #FFFFF0F0; -fx-border-color: #e0d16e;">
+         <children>
+            <Label layoutX="86.0" layoutY="47.0" prefHeight="34.0" prefWidth="116.0" text="Order ID">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="99.0" prefHeight="34.0" prefWidth="103.0" text="Amount">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="154.0" prefHeight="34.0" prefWidth="158.0" text="Customer ID">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtOrderID" layoutX="344.0" layoutY="33.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="307.0" />
+            <JFXTextField fx:id="txtOrderAmount" layoutX="344.0" layoutY="87.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="307.0" />
+            <JFXTextField fx:id="txtOrderCustomerID" layoutX="344.0" layoutY="144.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="307.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
